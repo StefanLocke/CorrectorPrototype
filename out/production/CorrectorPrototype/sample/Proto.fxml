@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -61,7 +62,7 @@
             </ToolBar>
             <ToolBar prefWidth="150.0" HBox.hgrow="SOMETIMES">
                <items>
-                  <Button mnemonicParsing="false" text="Save" />
+                  <Button mnemonicParsing="false" text="save" />
                   <Button mnemonicParsing="false" text="Load" />
                   <Button mnemonicParsing="false" text="Exp" />
                </items>
@@ -87,11 +88,11 @@
                   </HBox>
                </children>
             </VBox>
-            <AnchorPane styleClass="MainPane" HBox.hgrow="ALWAYS">
+            <AnchorPane fx:id="mainPane" styleClass="MainPane" HBox.hgrow="ALWAYS">
                <children>
                   <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <ImageView fitHeight="600.0" fitWidth="600.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@cow.jpg" />
                            </image>
@@ -100,7 +101,7 @@
                   </StackPane>
                   <AnchorPane id="BottomTogglePanel" fx:id="topPane" layoutX="150.0" layoutY="-76.0" prefHeight="100.0" prefWidth="200.0" styleClass="TogglePanel" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <HBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <HBox alignment="TOP_CENTER" pickOnBounds="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <children>
                               <Button fx:id="topButtonActive" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#toggleTop" prefHeight="15.0" prefWidth="40.0">
                                  <styleClass>
@@ -113,16 +114,16 @@
                      </children></AnchorPane>
                   <AnchorPane id="TopTogglePanel" fx:id="bottomPane" layoutX="140.0" layoutY="-86.0" prefHeight="100.0" styleClass="TogglePanel" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <children>
-                              <ImageView fitHeight="600.0" fitWidth="600.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <ImageView fitHeight="2000.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@cow.jpg" />
                                  </image>
                               </ImageView>
-                           </children>
-                        </StackPane>
-                        <HBox alignment="TOP_CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           </content>
+                        </ScrollPane>
+                        <HBox alignment="TOP_CENTER" pickOnBounds="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <Button fx:id="botButtonActive" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#toggleBottom" prefHeight="15.0" prefWidth="40.0">
                                  <styleClass>
@@ -138,7 +139,7 @@
                            </cursor>
                         </Separator>
                      </children></AnchorPane>
-                  <HBox alignment="BOTTOM_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <HBox alignment="BOTTOM_CENTER" pickOnBounds="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Button fx:id="botButtonHidden" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#toggleBottom" prefHeight="15.0" prefWidth="40.0">
                            <styleClass>
