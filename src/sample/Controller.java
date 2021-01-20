@@ -1,9 +1,14 @@
 package sample;
 
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseDragEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
@@ -34,6 +39,19 @@ public class Controller {
         bottomPane.setVisible(!botShow);
         botButtonHidden.setVisible(botShow);
         botShow = !botShow;
+
+    }
+    double startY ;
+
+    public void dragBottom(MouseEvent event) {
+        System.out.println(event.getSceneY());
+        if (event.getEventType() == MouseEvent.MOUSE_DRAGGED) {
+            bottomPane.setPrefHeight(bottomPane.getScene().getHeight()-event.getSceneY());
+            bottomPane.setMaxHeight(bottomPane.getScene().getHeight()-event.getSceneY());
+        }
+        if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
+            startY = event.getY();
+        }
 
     }
 
