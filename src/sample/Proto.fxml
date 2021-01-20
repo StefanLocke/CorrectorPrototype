@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox minHeight="720.0" minWidth="720.0" prefHeight="540.0" prefWidth="825.0" stylesheets="@../MyStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox minHeight="720.0" minWidth="720.0" prefHeight="540.0" prefWidth="938.0" stylesheets="@../MyStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
       <MenuBar>
         <menus>
@@ -34,6 +36,38 @@
           </Menu>
         </menus>
       </MenuBar>
+      <HBox>
+         <children>
+            <ToolBar maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" HBox.hgrow="SOMETIMES">
+              <items>
+                <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+            <ToolBar prefWidth="200.0" HBox.hgrow="ALWAYS">
+              <items>
+                <Button mnemonicParsing="false" text="Pen" />
+                  <Button mnemonicParsing="false" text="Gomme" />
+                  <Button mnemonicParsing="false" text="Stamp" />
+                  <Button mnemonicParsing="false" text="Thicc" />
+                  <Button mnemonicParsing="false" text="Thinn" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+            <ToolBar prefWidth="150.0" HBox.hgrow="SOMETIMES">
+               <items>
+                  <Button mnemonicParsing="false" text="Save" />
+                  <Button mnemonicParsing="false" text="Load" />
+                  <Button mnemonicParsing="false" text="Exp" />
+               </items>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToolBar>
+         </children>
+      </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
          <children>
             <VBox alignment="CENTER" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="200.0" prefWidth="150.0" styleClass="SideBoxes" HBox.hgrow="ALWAYS">
@@ -83,15 +117,6 @@
                            </children>
                         </HBox>
                      </children></AnchorPane>
-                  <HBox alignment="TOP_CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <Button fx:id="topButtonHidden" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#toggleTop" prefHeight="15.0" prefWidth="40.0">
-                           <styleClass>
-                              <String fx:value="ArrowButton" />
-                              <String fx:value="TopArrowButton" />
-                           </styleClass></Button>
-                     </children>
-                  </HBox>
                   <HBox alignment="BOTTOM_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Button fx:id="botButtonHidden" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#toggleBottom" prefHeight="15.0" prefWidth="40.0">
@@ -107,7 +132,6 @@
                <children>
                   <Label prefHeight="100.0" text="Question No.i" VBox.vgrow="ALWAYS" />
                   <ListView fx:id="rightList" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                  <Button mnemonicParsing="false" text="Sauveguarder" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
                      <children>
                         <Button mnemonicParsing="false" text="&lt;" />

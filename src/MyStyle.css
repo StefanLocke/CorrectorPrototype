@@ -27,11 +27,6 @@ Label {
     -fx-background-color: rgba(128,128,128,0.5);
 }
 
-Separator {
-    -fx-border-width: 1px;
-    -fx-border-color: lightgrey;
-    -fx-background-color: lightgrey;
-}
 .MainPane {
     -fx-border-width: 0px 3px 0px 3px ;
     -fx-border-color: #ececec ;
